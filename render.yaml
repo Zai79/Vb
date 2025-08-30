@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: discord-selfbot-voice
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: TOKEN
+        sync: false
+      - key: GUILD_ID
+        sync: false
+      - key: VOICE_ID
+        sync: false
